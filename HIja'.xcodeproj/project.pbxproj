@@ -1987,6 +1987,7 @@
 		420BFFFD206D31A200002128 /* audio_cax.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 420BF848206D313300002128 /* audio_cax.mp3 */; };
 		420BFFFE206D31A200002128 /* audio_vak.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 420BF849206D313300002128 /* audio_vak.mp3 */; };
 		420BFFFF206D31A200002128 /* audio_xef.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 420BF84A206D313300002128 /* audio_xef.mp3 */; };
+		4214F920206DAA4E00B11DF2 /* KlingonTTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4214F91F206DAA4E00B11DF2 /* KlingonTTS.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -3993,6 +3994,7 @@
 		420BFB8A206D31A000002128 /* audio_cad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio_cad.mp3; sourceTree = "<group>"; };
 		420BFB8B206D31A000002128 /* audio_ma.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio_ma.mp3; sourceTree = "<group>"; };
 		420BFB8C206D31A000002128 /* audio_vaz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio_vaz.mp3; sourceTree = "<group>"; };
+		4214F91F206DAA4E00B11DF2 /* KlingonTTS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KlingonTTS.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -4043,6 +4045,7 @@
 		420BF3A7206D2F7800002128 /* HIja' */ = {
 			isa = PBXGroup;
 			children = (
+				4214F91F206DAA4E00B11DF2 /* KlingonTTS.swift */,
 				420BF3D7206D301E00002128 /* audio */,
 				420BF3A8206D2F7800002128 /* AppDelegate.swift */,
 				420BF3AA206D2F7800002128 /* ViewController.swift */,
@@ -8161,6 +8164,7 @@
 			files = (
 				420BF3AB206D2F7800002128 /* ViewController.swift in Sources */,
 				420BF3A9206D2F7800002128 /* AppDelegate.swift in Sources */,
+				4214F920206DAA4E00B11DF2 /* KlingonTTS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
