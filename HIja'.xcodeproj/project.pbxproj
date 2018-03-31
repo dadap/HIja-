@@ -1989,7 +1989,6 @@
 		420BFFFF206D31A200002128 /* audio_xef.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 420BF84A206D313300002128 /* audio_xef.mp3 */; };
 		4214F920206DAA4E00B11DF2 /* KlingonTTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4214F91F206DAA4E00B11DF2 /* KlingonTTS.swift */; };
 		42EC0631206F2A4F00A1421F /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC0630206F2A4F00A1421F /* ActionRequestHandler.swift */; };
-		42EC0633206F2A4F00A1421F /* Action.js in Resources */ = {isa = PBXBuildFile; fileRef = 42EC0632206F2A4F00A1421F /* Action.js */; };
 		42EC0637206F2A5000A1421F /* Speak.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 42EC062E206F2A4F00A1421F /* Speak.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		42EC063C206F2A5C00A1421F /* KlingonTTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4214F91F206DAA4E00B11DF2 /* KlingonTTS.swift */; };
 		42EC063E206FAA9D00A1421F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 420BF3AF206D2F7900002128 /* Assets.xcassets */; };
@@ -4023,7 +4022,6 @@
 		4214F91F206DAA4E00B11DF2 /* KlingonTTS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KlingonTTS.swift; sourceTree = "<group>"; };
 		42EC062E206F2A4F00A1421F /* Speak.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Speak.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		42EC0630206F2A4F00A1421F /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
-		42EC0632206F2A4F00A1421F /* Action.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Action.js; sourceTree = "<group>"; };
 		42EC0634206F2A5000A1421F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -6098,7 +6096,6 @@
 			isa = PBXGroup;
 			children = (
 				42EC0630206F2A4F00A1421F /* ActionRequestHandler.swift */,
-				42EC0632206F2A4F00A1421F /* Action.js */,
 				42EC0634206F2A5000A1421F /* Info.plist */,
 			);
 			path = Speak;
@@ -8233,7 +8230,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				42EC063E206FAA9D00A1421F /* Assets.xcassets in Resources */,
-				42EC0633206F2A4F00A1421F /* Action.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
