@@ -1988,6 +1988,11 @@
 		420BFFFE206D31A200002128 /* audio_vak.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 420BF849206D313300002128 /* audio_vak.mp3 */; };
 		420BFFFF206D31A200002128 /* audio_xef.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 420BF84A206D313300002128 /* audio_xef.mp3 */; };
 		4214F920206DAA4E00B11DF2 /* KlingonTTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4214F91F206DAA4E00B11DF2 /* KlingonTTS.swift */; };
+		42EC0631206F2A4F00A1421F /* ActionRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC0630206F2A4F00A1421F /* ActionRequestHandler.swift */; };
+		42EC0633206F2A4F00A1421F /* Action.js in Resources */ = {isa = PBXBuildFile; fileRef = 42EC0632206F2A4F00A1421F /* Action.js */; };
+		42EC0637206F2A5000A1421F /* Speak.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 42EC062E206F2A4F00A1421F /* Speak.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		42EC063C206F2A5C00A1421F /* KlingonTTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4214F91F206DAA4E00B11DF2 /* KlingonTTS.swift */; };
+		42EC063E206FAA9D00A1421F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 420BF3AF206D2F7900002128 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2005,7 +2010,28 @@
 			remoteGlobalIDString = 420BF3A4206D2F7800002128;
 			remoteInfo = "HIja'";
 		};
+		42EC0635206F2A5000A1421F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 420BF39D206D2F7800002128 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42EC062D206F2A4F00A1421F;
+			remoteInfo = Speak;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		42EC063B206F2A5000A1421F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				42EC0637206F2A5000A1421F /* Speak.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		420BF3A5206D2F7800002128 /* HIja'.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HIja'.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3995,6 +4021,10 @@
 		420BFB8B206D31A000002128 /* audio_ma.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio_ma.mp3; sourceTree = "<group>"; };
 		420BFB8C206D31A000002128 /* audio_vaz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio_vaz.mp3; sourceTree = "<group>"; };
 		4214F91F206DAA4E00B11DF2 /* KlingonTTS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KlingonTTS.swift; sourceTree = "<group>"; };
+		42EC062E206F2A4F00A1421F /* Speak.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Speak.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		42EC0630206F2A4F00A1421F /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
+		42EC0632206F2A4F00A1421F /* Action.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Action.js; sourceTree = "<group>"; };
+		42EC0634206F2A5000A1421F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -4019,6 +4049,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42EC062B206F2A4F00A1421F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -4028,6 +4065,7 @@
 				420BF3A7206D2F7800002128 /* HIja' */,
 				420BF3BC206D2F7900002128 /* HIja'Tests */,
 				420BF3C7206D2F7900002128 /* HIja'UITests */,
+				42EC062F206F2A4F00A1421F /* Speak */,
 				420BF3A6206D2F7800002128 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -4038,6 +4076,7 @@
 				420BF3A5206D2F7800002128 /* HIja'.app */,
 				420BF3B9206D2F7900002128 /* HIja'Tests.xctest */,
 				420BF3C4206D2F7900002128 /* HIja'UITests.xctest */,
+				42EC062E206F2A4F00A1421F /* Speak.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -6055,6 +6094,16 @@
 			path = audio;
 			sourceTree = "<group>";
 		};
+		42EC062F206F2A4F00A1421F /* Speak */ = {
+			isa = PBXGroup;
+			children = (
+				42EC0630206F2A4F00A1421F /* ActionRequestHandler.swift */,
+				42EC0632206F2A4F00A1421F /* Action.js */,
+				42EC0634206F2A5000A1421F /* Info.plist */,
+			);
+			path = Speak;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -6065,10 +6114,12 @@
 				420BF3A1206D2F7800002128 /* Sources */,
 				420BF3A2206D2F7800002128 /* Frameworks */,
 				420BF3A3206D2F7800002128 /* Resources */,
+				42EC063B206F2A5000A1421F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				42EC0636206F2A5000A1421F /* PBXTargetDependency */,
 			);
 			name = "HIja'";
 			productName = "HIja'";
@@ -6111,6 +6162,23 @@
 			productReference = 420BF3C4206D2F7900002128 /* HIja'UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		42EC062D206F2A4F00A1421F /* Speak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42EC063A206F2A5000A1421F /* Build configuration list for PBXNativeTarget "Speak" */;
+			buildPhases = (
+				42EC062A206F2A4F00A1421F /* Sources */,
+				42EC062B206F2A4F00A1421F /* Frameworks */,
+				42EC062C206F2A4F00A1421F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Speak;
+			productName = Speak;
+			productReference = 42EC062E206F2A4F00A1421F /* Speak.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -6135,6 +6203,10 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 420BF3A4206D2F7800002128;
 					};
+					42EC062D206F2A4F00A1421F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 420BF3A0206D2F7800002128 /* Build configuration list for PBXProject "HIja'" */;
@@ -6153,6 +6225,7 @@
 				420BF3A4206D2F7800002128 /* HIja' */,
 				420BF3B8206D2F7900002128 /* HIja'Tests */,
 				420BF3C3206D2F7900002128 /* HIja'UITests */,
+				42EC062D206F2A4F00A1421F /* Speak */,
 			);
 		};
 /* End PBXProject section */
@@ -8155,6 +8228,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42EC062C206F2A4F00A1421F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42EC063E206FAA9D00A1421F /* Assets.xcassets in Resources */,
+				42EC0633206F2A4F00A1421F /* Action.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -8184,6 +8266,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42EC062A206F2A4F00A1421F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42EC063C206F2A5C00A1421F /* KlingonTTS.swift in Sources */,
+				42EC0631206F2A4F00A1421F /* ActionRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -8196,6 +8287,11 @@
 			isa = PBXTargetDependency;
 			target = 420BF3A4206D2F7800002128 /* HIja' */;
 			targetProxy = 420BF3C5206D2F7900002128 /* PBXContainerItemProxy */;
+		};
+		42EC0636206F2A5000A1421F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42EC062D206F2A4F00A1421F /* Speak */;
+			targetProxy = 42EC0635206F2A5000A1421F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -8329,6 +8425,7 @@
 		420BF3CE206D2F7900002128 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P46ZKENCT;
@@ -8344,6 +8441,7 @@
 		420BF3CF206D2F7900002128 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P46ZKENCT;
@@ -8422,6 +8520,36 @@
 			};
 			name = Release;
 		};
+		42EC0638206F2A5000A1421F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P46ZKENCT;
+				INFOPLIST_FILE = Speak/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tlhInganHol.iOS.klingonttsengine.Speak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42EC0639206F2A5000A1421F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7P46ZKENCT;
+				INFOPLIST_FILE = Speak/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.tlhInganHol.iOS.klingonttsengine.Speak;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -8457,6 +8585,15 @@
 			buildConfigurations = (
 				420BF3D4206D2F7900002128 /* Debug */,
 				420BF3D5206D2F7900002128 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42EC063A206F2A5000A1421F /* Build configuration list for PBXNativeTarget "Speak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42EC0638206F2A5000A1421F /* Debug */,
+				42EC0639206F2A5000A1421F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
