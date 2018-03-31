@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBAction func speak (_ sender: AnyObject) {
-        let tts = KlingonTTS(["qa0", "maz", "puz", "jon", "taz", "neh"])
+        let tts = KlingonTTS("qama'pu' jonta' neH")
         tts.say()
     }
 
