@@ -164,7 +164,7 @@ class KlingonTTS: NSObject {
                 player?.play()
                 // XXX figure out why delegate audioPlayerDidFinishPlaying isn't working and use that instead
                 while (player != nil && (player?.isPlaying)!) {
-                    usleep(5)
+                    usleep(10)
                 }
             } catch {
                 print("error")
