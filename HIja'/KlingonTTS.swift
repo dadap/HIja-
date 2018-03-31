@@ -127,7 +127,7 @@ class KlingonTTS: NSObject {
         super.init()
     }
 
-    convenience init(_ phrase: String) {
+    convenience init(_ phrase: String, rate : Float = 1.0) {
         var syllables : [String] = []
         var normalized = phrase
 
@@ -148,7 +148,8 @@ class KlingonTTS: NSObject {
         for word in normalized.split(separator: " ") {
             syllables.append(contentsOf: KlingonTTS.syllabize(word))
         }
-        self.init(syllables)
+        self.init(syllables, rate: rate)
+
     }
 
     func say() {
