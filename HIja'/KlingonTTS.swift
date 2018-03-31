@@ -113,17 +113,44 @@ class KlingonTTS: NSObject {
         case assetNotFound
     }
 
-    private var player: AVAudioPlayer?
-    private var phrase: [NSDataAsset]!
-    private var rate : Float
+    private class SpeechUnit {
+        final let text : String
+        final let asset : NSDataAsset?
+
+        init(_ fromText : String) {
+            text = fromText
+            var sound = NSDataAsset(name: "audio_" + text)
+            if (sound == nil) {
+                sound = NSDataAsset(name: "audio_cough")
+            }
+            asset = sound
+        }
+    }
+
+    private var players: [AVAudioPlayer]!
+    private var phrase: [SpeechUnit]!
 
     init(_ syllables: [String], rate : Float = 1.0) {
+        players = []
         phrase = []
-        for syllable in syllables {
-            let assetName = "audio_" + syllable
-            phrase.append(NSDataAsset(name: assetName)!)
+
+        // XXX add an extra cough to the end since the last syllable is dropped
+        var syllablesPlus = syllables
+        syllablesPlus.append("xxx")
+
+        for syllable in syllablesPlus {
+            let unit = SpeechUnit(syllable)
+            phrase.append(unit)
+            if (unit.asset != nil) {
+                do {
+                    let player = try AVAudioPlayer(data: (unit.asset?.data)!, fileTypeHint: AVFileType.mp3.rawValue)
+                    player.rate = rate
+                    player.enableRate = true
+                    players.append(player)
+                } catch {
+                }
+            }
         }
-        self.rate = rate
         super.init()
     }
 
@@ -154,20 +181,33 @@ class KlingonTTS: NSObject {
 
     func say() {
         var i = 0;
-        while (i < phrase.count) {
-            do {
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-                try AVAudioSession.sharedInstance().setActive(true)
-                player = try AVAudioPlayer(data: phrase[i].data, fileTypeHint: AVFileType.mp3.rawValue)
-                player?.rate = rate
-                player?.enableRate = true
-                player?.play()
-                // XXX figure out why delegate audioPlayerDidFinishPlaying isn't working and use that instead
-                while (player != nil && (player?.isPlaying)!) {
+        while (i < players.count) {
+            // XXX always true: this should really be checking phrase[i].asset.data
+            if (players[i] != nil) {
+                do {
+                    try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                    try AVAudioSession.sharedInstance().setActive(true)
+                    if (i > 0) {
+                        // XXX figure out why delegate audioPlayerDidFinishPlaying isn't
+                        // working and use that instead
+                        while (players[i-1].isPlaying) {
+                            usleep(10)
+                        }
+                    }
+                    players[i].play()
+                } catch {
+                    print("error")
+                }
+            } else {
+                // TODO: fix synchronization between Klingon and non-Klingon TTS
+                print(phrase[i].text)
+                let tts = AVSpeechSynthesizer()
+                let utterance = AVSpeechUtterance(string: phrase[i].text)
+                utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+                tts.speak(utterance)
+                while (tts.isSpeaking) {
                     usleep(10)
                 }
-            } catch {
-                print("error")
             }
             i = i + 1
         }
