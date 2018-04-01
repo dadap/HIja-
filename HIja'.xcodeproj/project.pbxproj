@@ -8519,6 +8519,7 @@
 		42EC0638206F2A5000A1421F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P46ZKENCT;
 				INFOPLIST_FILE = Speak/Info.plist;
@@ -8534,6 +8535,7 @@
 		42EC0639206F2A5000A1421F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P46ZKENCT;
 				INFOPLIST_FILE = Speak/Info.plist;
