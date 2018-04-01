@@ -10,8 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var inputText : UITextField!
+
     @IBAction func speak (_ sender: AnyObject) {
-        let tts = KlingonTTS("qama'pu' jonta' neH")
+        let tts = KlingonTTS(inputText.text!)
         tts.say()
     }
 

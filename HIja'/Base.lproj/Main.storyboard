@@ -18,18 +18,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hl-iY-3R5">
-                                <rect key="frame" x="172" y="81" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hl-iY-3R5">
+                                <rect key="frame" x="172.5" y="82" width="30" height="30"/>
                                 <state key="normal" title="HIja'"/>
                                 <connections>
                                     <action selector="speak:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w1c-b1-D1S"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nuq vIjatlh 'e' DaneH?" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SPY-wd-8LP">
+                                <rect key="frame" x="12" y="32" width="351" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4hl-iY-3R5" firstAttribute="top" secondItem="SPY-wd-8LP" secondAttribute="bottom" constant="20" id="Lyz-Qb-fb6"/>
+                            <constraint firstItem="SPY-wd-8LP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="VlX-Jd-7cw"/>
+                            <constraint firstItem="SPY-wd-8LP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-12" id="nsH-2k-XMg"/>
+                            <constraint firstItem="SPY-wd-8LP" firstAttribute="centerX" secondItem="4hl-iY-3R5" secondAttribute="centerX" id="uoZ-qt-v5L"/>
+                            <constraint firstItem="SPY-wd-8LP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="zFI-wJ-uoq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="inputText" destination="SPY-wd-8LP" id="bcx-cC-O6G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
