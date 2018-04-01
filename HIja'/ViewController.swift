@@ -17,6 +17,11 @@ class ViewController: UIViewController {
         tts.say()
     }
 
+    @IBAction func phraseButton (_ sender: UIButton) {
+        let tts = KlingonTTS(sender.titleLabel!.text!)
+        tts.say()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

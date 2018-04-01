@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,29 +15,55 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HIja_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4hl-iY-3R5">
-                                <rect key="frame" x="172.5" y="82" width="30" height="30"/>
+                                <rect key="frame" x="145" y="82" width="30" height="30"/>
                                 <state key="normal" title="HIja'"/>
                                 <connections>
                                     <action selector="speak:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w1c-b1-D1S"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nuq vIjatlh 'e' DaneH?" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SPY-wd-8LP">
-                                <rect key="frame" x="12" y="32" width="351" height="30"/>
+                                <rect key="frame" x="12" y="32" width="296" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJV-oV-Dvo">
+                                <rect key="frame" x="8" y="124" width="140" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="133" id="gfj-En-FoF"/>
+                                    <constraint firstAttribute="width" constant="140" id="yEq-gw-8nR"/>
+                                </constraints>
+                                <state key="normal" title="tlhIngan Hol vIjatlhbe'" image="noklingon"/>
+                                <connections>
+                                    <action selector="phraseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7v0-ct-4AX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUU-hu-hMC">
+                                <rect key="frame" x="172" y="124" width="140" height="133"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="d0a-W0-ylb"/>
+                                    <constraint firstAttribute="height" constant="133" id="xe7-N8-fAk"/>
+                                </constraints>
+                                <state key="normal" title="DIvI' Hol Dajatlh'a'" image="federation"/>
+                                <connections>
+                                    <action selector="phraseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4tx-MN-M9q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="nJV-oV-Dvo" firstAttribute="top" secondItem="4hl-iY-3R5" secondAttribute="bottom" constant="12" id="K6Y-9l-O3f"/>
                             <constraint firstItem="4hl-iY-3R5" firstAttribute="top" secondItem="SPY-wd-8LP" secondAttribute="bottom" constant="20" id="Lyz-Qb-fb6"/>
+                            <constraint firstItem="nJV-oV-Dvo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="SXl-le-Me1"/>
                             <constraint firstItem="SPY-wd-8LP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="VlX-Jd-7cw"/>
+                            <constraint firstItem="iUU-hu-hMC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-8" id="WEu-6j-G38"/>
                             <constraint firstItem="SPY-wd-8LP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-12" id="nsH-2k-XMg"/>
                             <constraint firstItem="SPY-wd-8LP" firstAttribute="centerX" secondItem="4hl-iY-3R5" secondAttribute="centerX" id="uoZ-qt-v5L"/>
+                            <constraint firstItem="iUU-hu-hMC" firstAttribute="top" secondItem="nJV-oV-Dvo" secondAttribute="top" id="yfd-9n-IKM"/>
                             <constraint firstItem="SPY-wd-8LP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="zFI-wJ-uoq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -48,6 +74,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="31.199999999999999" y="96.7016491754123"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="federation" width="1024" height="1024"/>
+        <image name="noklingon" width="1024" height="1024"/>
+    </resources>
 </document>
