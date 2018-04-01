@@ -11,14 +11,15 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var inputText : UITextField!
+    @IBOutlet weak var rateSlider : UISlider!
 
     @IBAction func speak (_ sender: AnyObject) {
-        let tts = KlingonTTS(inputText.text!)
+        let tts = KlingonTTS(inputText.text!, rate: rateSlider.value)
         tts.say()
     }
 
     @IBAction func phraseButton (_ sender: UIButton) {
-        let tts = KlingonTTS(sender.titleLabel!.text!)
+        let tts = KlingonTTS(sender.titleLabel!.text!, rate: rateSlider.value)
         tts.say()
     }
 
