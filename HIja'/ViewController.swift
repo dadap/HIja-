@@ -23,6 +23,10 @@ class ViewController: UIViewController {
         tts.say()
     }
 
+    @IBAction func enterPressed(_ sender: AnyObject) {
+        speak(sender)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
