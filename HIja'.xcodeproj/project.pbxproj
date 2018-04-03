@@ -8426,6 +8426,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P46ZKENCT;
 				INFOPLIST_FILE = "HIja'/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.tlhInganHol.iOS.klingonttsengine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -8442,6 +8443,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P46ZKENCT;
 				INFOPLIST_FILE = "HIja'/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.tlhInganHol.iOS.klingonttsengine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -8523,6 +8525,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P46ZKENCT;
 				INFOPLIST_FILE = Speak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.tlhInganHol.iOS.klingonttsengine.Speak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -8539,6 +8542,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P46ZKENCT;
 				INFOPLIST_FILE = Speak/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.tlhInganHol.iOS.klingonttsengine.Speak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
