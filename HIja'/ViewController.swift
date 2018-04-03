@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var defaults : UserDefaults!
+
     @IBOutlet weak var inputText : UITextField!
     @IBOutlet weak var rateSlider : UISlider!
 
@@ -27,9 +29,20 @@ class ViewController: UIViewController {
         speak(sender)
     }
 
+    @IBAction func rateChanged(_ sender: UISlider) {
+        defaults.set(sender.value, forKey: "rate")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        defaults = UserDefaults(suiteName: "group.org.tlhInganHol.iOS.klingonttsengine")
+
+        let rate = defaults.float(forKey: "rate")
+        if (rate != 0) {
+            rateSlider.value = rate
+        }
     }
 
     override func didReceiveMemoryWarning() {

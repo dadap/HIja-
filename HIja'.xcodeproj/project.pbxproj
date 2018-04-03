@@ -4020,6 +4020,8 @@
 		420BFB8B206D31A000002128 /* audio_ma.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio_ma.mp3; sourceTree = "<group>"; };
 		420BFB8C206D31A000002128 /* audio_vaz.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio_vaz.mp3; sourceTree = "<group>"; };
 		4214F91F206DAA4E00B11DF2 /* KlingonTTS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KlingonTTS.swift; sourceTree = "<group>"; };
+		42C4C75B207323AA0055D051 /* Speak.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Speak.entitlements; sourceTree = "<group>"; };
+		42C4C75C207323D10055D051 /* HIja'.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HIja'.entitlements"; sourceTree = "<group>"; };
 		42EC062E206F2A4F00A1421F /* Speak.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Speak.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		42EC0630206F2A4F00A1421F /* ActionRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionRequestHandler.swift; sourceTree = "<group>"; };
 		42EC0634206F2A5000A1421F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -4082,6 +4084,7 @@
 		420BF3A7206D2F7800002128 /* HIja' */ = {
 			isa = PBXGroup;
 			children = (
+				42C4C75C207323D10055D051 /* HIja'.entitlements */,
 				4214F91F206DAA4E00B11DF2 /* KlingonTTS.swift */,
 				420BF3D7206D301E00002128 /* audio */,
 				420BF3A8206D2F7800002128 /* AppDelegate.swift */,
@@ -6095,6 +6098,7 @@
 		42EC062F206F2A4F00A1421F /* Speak */ = {
 			isa = PBXGroup;
 			children = (
+				42C4C75B207323AA0055D051 /* Speak.entitlements */,
 				42EC0630206F2A4F00A1421F /* ActionRequestHandler.swift */,
 				42EC0634206F2A5000A1421F /* Info.plist */,
 			);
@@ -6189,6 +6193,11 @@
 					420BF3A4206D2F7800002128 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					420BF3B8206D2F7900002128 = {
 						CreatedOnToolsVersion = 9.2;
@@ -6203,6 +6212,11 @@
 					42EC062D206F2A4F00A1421F = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -8423,6 +8437,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "HIja'/HIja'.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P46ZKENCT;
 				INFOPLIST_FILE = "HIja'/Info.plist";
@@ -8440,6 +8455,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "HIja'/HIja'.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P46ZKENCT;
 				INFOPLIST_FILE = "HIja'/Info.plist";
@@ -8522,6 +8538,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Speak/Speak.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P46ZKENCT;
 				INFOPLIST_FILE = Speak/Info.plist;
@@ -8539,6 +8556,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Speak/Speak.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7P46ZKENCT;
 				INFOPLIST_FILE = Speak/Info.plist;

@@ -21,7 +21,14 @@ class ActionRequestHandler: NSObject, NSExtensionRequestHandling {
                 if provider.hasItemConformingToTypeIdentifier(kUTTypeText as String) {
                     provider.loadItem(forTypeIdentifier: kUTTypeText as String, options: nil, completionHandler: { (data, error) -> Void in
                         if let text = data as? String {
-                            let tts = KlingonTTS(text, rate: 2.0)
+                            var rate : Float = 1.5
+                            if let defaults = UserDefaults(suiteName: "group.org.tlhInganHol.iOS.klingonttsengine") {
+                                let defaultsRate = defaults.float(forKey: "rate")
+                                if (defaultsRate != 0) {
+                                    rate = defaultsRate
+                                }
+                            }
+                            let tts = KlingonTTS(text, rate: rate)
                             tts.say()
                             self.extensionContext!.completeRequest(returningItems: nil, completionHandler: nil)
                         }

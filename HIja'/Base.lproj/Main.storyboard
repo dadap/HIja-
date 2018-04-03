@@ -63,6 +63,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="nqT-ku-nhA"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="rateChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="kJl-NX-CPb"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QIch Do" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAx-WP-Qho">
                                 <rect key="frame" x="133" y="302" width="148" height="21"/>
