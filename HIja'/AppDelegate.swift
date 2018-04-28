@@ -12,10 +12,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var phrase: String?
+    var caller: String?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        return true
+    }
+
+    func application(_ application: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+        if url.scheme == "klingontts" && url.host == "speak" {
+            self.caller = options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String
+            self.phrase = url.path.removingPercentEncoding?.trimmingCharacters(in: CharacterSet(["/"]))
+        }
         return true
     }
 

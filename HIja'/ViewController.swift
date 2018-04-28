@@ -39,9 +39,39 @@ class ViewController: UIViewController {
 
         defaults = UserDefaults(suiteName: "group.org.tlhInganHol.iOS.klingonttsengine")
 
+        NotificationCenter.default.addObserver(self, selector: #selector(externalPhrase), name: .UIApplicationDidBecomeActive, object: nil)
         let rate = defaults.float(forKey: "rate")
         if (rate != 0) {
             rateSlider.value = rate
+        }
+    }
+
+    @objc func externalPhrase(_ animated: Bool) {
+        if let delegate = UIApplication.shared.delegate as? AppDelegate {
+            if (delegate.phrase != nil) {
+                let originalText = inputText.text
+                inputText.text = delegate.phrase
+                let rate = rateSlider.value
+
+                let tts = KlingonTTS(delegate.phrase!, rate: rate)
+
+                DispatchQueue.global().async {
+                    tts.say()
+                    delegate.phrase = nil
+                    DispatchQueue.main.async {
+                        self.inputText.text = originalText
+
+                        if (delegate.caller == "org.tlhInganHol.iOS.flingonassister") {
+                            let url = URL(string: "content://org.tlhInganHol.android.klingonassistant.KlingonContentProvider")!
+                            if #available(iOS 10.0, *) {
+                                UIApplication.shared.open(url, completionHandler: nil)
+                            } else {
+                                UIApplication.shared.openURL(url)
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
